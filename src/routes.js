@@ -69,7 +69,7 @@ routes.get("/hi", async (req, res) => {
 
   const coord = address.features[0].geometry.coordinates;
 
-  const test = {
+  const view = {
     gps: { lat: coord[0], long: coord[1] },
     joke: joke.joke,
     catFact: arrayCat,
@@ -77,7 +77,7 @@ routes.get("/hi", async (req, res) => {
     taco: tacos.condiment.recipe
   };
 
-  res.render("index", test);
+  res.render("index", view);
 });
 
 /**

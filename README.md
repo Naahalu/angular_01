@@ -1,8 +1,8 @@
-## Aggregate API
+# Aggregate API
 
-API aggregating multiple API response
+API aggregating multiple API response.
 
-Integration with tailwind
+- Integration with tailwind.
 
 # Express.js with Babel Boilerplate
 
