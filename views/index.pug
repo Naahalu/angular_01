@@ -1,5 +1,23 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.w-400.mx-auto.bg-white.shadow-md.rounded.p-8.mb-4
+    .mb-4
+      h1.text-3xl.pb-8= 'How about a joke ?'
+      p.text-gray-700.text-2xl #{joke}
+    .mb-4
+      h1.text-3xl.pb-8= 'Want to know a good beer ?'
+      p.text-gray-700.text-2xl  Name: #{beer.name}
+      p.text-gray-700.text-2xl  Description: #{beer.description}
+    .mb-4
+      h1.text-3xl.pb-8= 'Or maybe a taco recipe ?'
+      p.text-gray-700.text-2xl  #{taco}
+    .mb-4
+      h1.text-3xl.pb-8= 'Here is the coordinate of good place to visit :'
+      p.text-gray-700.text-2xl  Lattitude: #{gps.lat}
+      p.text-gray-700.text-2xl  Longitude: #{gps.long}
+    .mb-4
+      h1.text-3xl.pb-8= `Let's finish by some facts on cat to shine in society`
+      ul
+        each val in catFact
+          li.text-gray-700.text-2xl.pb-3= val
