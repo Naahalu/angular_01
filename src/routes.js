@@ -5,7 +5,6 @@ const routes = Router();
 
 const request = async optionRequest => {
   const { data } = await Axios(optionRequest);
-  console.log(data);
   return data;
 };
 
@@ -23,37 +22,17 @@ routes.get("/hi", async (req, res) => {
     beer = await request({
       baseURL: "https://api.punkapi.com/v2/beers/1"
     });
-  } catch (err) {
-    console.log(err);
-  }
-
-  try {
     joke = await request({
       baseURL:
         "https://sv443.net/jokeapi/v2/joke/Programming,Miscellaneous?format=json&blacklistFlags=nsfw,sexist&type=single"
     });
-  } catch (err) {
-    console.log(err);
-  }
-
-  try {
     tacos = await request({
       baseURL: "http://taco-randomizer.herokuapp.com/random/"
     });
-  } catch (err) {
-    console.log(err);
-  }
-
-  try {
     factsCat = await request({
       baseURL:
         "https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=3"
     });
-  } catch (err) {
-    console.log(err);
-  }
-
-  try {
     address = await request({
       baseURL:
         "https://api-adresse.data.gouv.fr/search/?q=41+rue+du+port&limit=1"
